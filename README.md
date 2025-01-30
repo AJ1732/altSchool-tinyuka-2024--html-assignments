@@ -1,4 +1,4 @@
-# Assignments Folder
+# HTML Assignments
 
 This folder contains the solutions to the assignments given for the AltSchool 2024 Tinyuka program.
 Below are the details of each assignment:
