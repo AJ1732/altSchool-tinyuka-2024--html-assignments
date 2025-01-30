@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ALT/SOE/024/2954 - Assignment 1</title>
+    <link rel="stylesheet" href="./css/form.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <aside>
+        <figure class="aside__display">
+          <img src="./assets/form_hero.jpg" alt="Form hero image" />
+        </figure>
+
+        <section class="aside__section">
+          <h1 class="text__headline">
+            Learn highly sought after skills without hassle.
+          </h1>
+
+          <div>
+            <ul>
+              <li>
+                <a
+                  href="https://x.com/altschoolafrica"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <i class="fa-brands fa-x-twitter"></i>
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://www.instagram.com/altschoolafrica"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <i class="fa-brands fa-instagram"></i>
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://www.facebook.com/AltSchoolAfrica"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <i class="fa-brands fa-facebook"></i>
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://www.linkedin.com/school/altschool-africa"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <i class="fa-brands fa-linkedin"></i>
+                </a>
+              </li>
+            </ul>
+
+            <p class="text__copyright">
+              2025 © AltSchool Africa. All rights reserved.
+            </p>
+          </div>
+        </section>
+      </aside>
+
+      <div class="content">
+        <main>
+          <nav>
+            <a href="index.html">↖ Back to Biography</a>
+          </nav>
+
+          <p class="text__signin">
+            Already an AltScholar? <a href="/">Sign In!</a>
+          </p>
+
+          <form action="/submit" method="post">
+            <legend>
+              <h2>Signup</h2>
+              <p>Take the next steps to apply at AltSchool Africa</p>
+            </legend>
+
+            <fieldset>
+              <div class="form__field">
+                <label for="firstName">First Name</label>
+                <input
+                  type="text"
+                  name="firstName"
+                  id="firstName"
+                  placeholder="First Name"
+                  required
+                />
+              </div>
+
+              <div class="form__field">
+                <label for="lastName">Last Name</label>
+                <input
+                  type="text"
+                  name="lastName"
+                  id="lastName"
+                  placeholder="Last Name"
+                  required
+                />
+              </div>
+
+              <div class="form__field">
+                <label for="email">Email</label>
+                <input
+                  type="email"
+                  name="email"
+                  id="email"
+                  placeholder="Email"
+                  required
+                />
+              </div>
+
+              <div class="form__field">
+                <label for="gender">Gender</label>
+                <select name="gender" id="gender" required>
+                  <option value="" disabled selected hidden>
+                    Select Gender
+                  </option>
+                  <option value="male">Male</option>
+                  <option value="female">Female</option>
+                </select>
+
+                <svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  class="icon__button .icon__button--inert"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <g id="u:angle-down">
+                    <path
+                      id="Vector"
+                      d="M17 9.17C16.8126 8.98375 16.5592 8.87921 16.295 8.87921C16.0308 8.87921 15.7774 8.98375 15.59 9.17L12 12.71L8.45999 9.17C8.27263 8.98375 8.01918 8.87921 7.75499 8.87921C7.49081 8.87921 7.23736 8.98375 7.04999 9.17C6.95627 9.26297 6.88187 9.37357 6.8311 9.49543C6.78033 9.61729 6.7542 9.74799 6.7542 9.88C6.7542 10.012 6.78033 10.1427 6.8311 10.2646C6.88187 10.3864 6.95627 10.497 7.04999 10.59L11.29 14.83C11.383 14.9237 11.4936 14.9981 11.6154 15.0489C11.7373 15.0997 11.868 15.1258 12 15.1258C12.132 15.1258 12.2627 15.0997 12.3846 15.0489C12.5064 14.9981 12.617 14.9237 12.71 14.83L17 10.59C17.0937 10.497 17.1681 10.3864 17.2189 10.2646C17.2697 10.1427 17.2958 10.012 17.2958 9.88C17.2958 9.74799 17.2697 9.61729 17.2189 9.49543C17.1681 9.37357 17.0937 9.26297 17 9.17Z"
+                      fill="#1a202c"
+                    />
+                  </g>
+                </svg>
+              </div>
+
+              <div class="form__field">
+                <label for="dateOfBirth">Date of Birth</label>
+                <input
+                  type="date"
+                  name="dateOfBirth"
+                  id="dateOfBirth"
+                  placeholder="Date of Birth"
+                  required
+                />
+              </div>
+
+              <div class="form__field">
+                <label for="phoneNumber">Phone Number</label>
+                <input
+                  type="text"
+                  name="phoneNumber"
+                  id="phoneNumber"
+                  placeholder="Phone Number"
+                  required
+                />
+              </div>
+
+              <div class="form__field">
+                <label for="country">Country of Residence</label>
+                <input
+                  type="text"
+                  name="country"
+                  id="country"
+                  placeholder="Country of Residence"
+                  required
+                />
+              </div>
+
+              <div class="form__field">
+                <label for="state">State of Residence</label>
+                <input
+                  type="text"
+                  name="state"
+                  id="state"
+                  placeholder="State of Residence"
+                  required
+                />
+              </div>
+
+              <div class="form__field">
+                <label for="password">Password</label>
+                <input
+                  type="password"
+                  name="password"
+                  id="password"
+                  placeholder="Password"
+                  required
+                />
+                <i
+                  id="togglePassword"
+                  class="fa-solid fa-eye-slash icon__button icon__button--password"
+                ></i>
+              </div>
+
+              <div class="form__field">
+                <label for="confirmPassword">Confirm Password</label>
+                <input
+                  type="password"
+                  name="confirmPassword"
+                  id="confirmPassword"
+                  placeholder="Confirm Password"
+                  required
+                />
+
+                <i
+                  id="togglePassword"
+                  class="fa-solid fa-eye-slash icon__button icon__button--password"
+                ></i>
+              </div>
+
+              <div class="form__field form__field--span">
+                <label for="additionalInfo">How did you hear about us?</label>
+                <input
+                  type="password"
+                  name="additionalInfo"
+                  id="additionalInfo"
+                  placeholder="Optional: Let us know how you found us"
+                  required
+                />
+              </div>
+            </fieldset>
+
+            <p class="text__conditions">
+              By clicking continue, I agree to <span>Terms of Use</span> and
+              acknowledge that I have read the <span>Privacy Policy</span>.
+            </p>
+
+            <button>Sign up</button>
+          </form>
+        </main>
+
+        <footer class="text__copyright__2">
+          <p>2025 &copy; ejemeniboi@gmail.com</p>
+        </footer>
+      </div>
+    </div>
+
+    <script src="./js/script.js"></script>
+  </body>
+</html>

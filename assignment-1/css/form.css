@@ -1,0 +1,330 @@
+@import "../font/fonts.css";
+@import url("https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+/* RESET STYLES */
+/* 1. Use a more-intuitive box-sizing model */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* 2. Remove default margin */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  /* 3. Add accessible line-height */
+  /* line-height: 1.5; */
+  /* 4. Improve text rendering */
+  -webkit-font-smoothing: antialiased;
+}
+
+/* 5. Improve media defaults */
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+/* 6. Inherit fonts for form controls */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* 7. Avoid text overflows */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+/* 8. Improve line wrapping */
+p {
+  text-wrap: pretty;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-wrap: balance;
+}
+
+/*
+  9. Create a root stacking context
+*/
+#root,
+#__next {
+  isolation: isolate;
+}
+
+/* CUSTOM STYLES STARTS HERE */
+
+:root {
+  --primary-500: #0367f2;
+  --gray-200: #e2e8f0;
+  --gray-500: #718096;
+  --foreground: #1a202c;
+  --background: #ffffff;
+  --border: #e2e8f0;
+  --shade: #fffcf8;
+
+  --fs-sm: 0.875rem;
+  --fs-base: 1rem;
+  --fs-4xl: 2.25rem;
+
+  --radii-md: 0.375rem;
+
+  --heading-font: "Fira Sans", serif;
+  --body-font: "Euclid Circular A", serif;
+}
+
+body {
+  color: var(--foreground);
+  font-family: var(--body-font);
+}
+.container {
+  min-height: 100svh;
+  width: 100%;
+  display: grid;
+}
+aside,
+main,
+footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+aside {
+  display: none;
+  background-color: var(--shade);
+}
+main {
+  min-height: calc(100svh - 7rem);
+  gap: 1.5rem;
+}
+footer {
+  height: 100%;
+  max-height: 4rem;
+  border-top: 1px solid var(--shade);
+}
+@media (min-width: 1024px) {
+  .container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  aside {
+    display: flex;
+  }
+  footer {
+    grid-column: 1/-1;
+  }
+}
+h1,
+h2 {
+  font-family: var(--heading-font);
+}
+ul,
+li {
+  list-style: none;
+}
+a {
+  color: var(--primary-500);
+  text-decoration: none;
+  width: fit-content;
+  font-size: 1.125rem;
+}
+a:hover,
+a:active,
+a:visited {
+  color: var(--primary-500);
+  text-decoration: underline;
+}
+
+button {
+  color: white;
+  width: 100%;
+  background-color: var(--primary-500);
+  padding: 1rem;
+  border: none;
+  border-radius: var(--radii-md);
+  outline: none;
+  font-size: var(--fs-sm);
+}
+@media (min-width: 1024px) {
+  button {
+    font-size: var(--fs-base);
+  }
+}
+
+.content {
+  padding: 3rem 1.5rem;
+}
+
+form {
+  width: 100%;
+  max-width: 48rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+@media (min-width: 1024px) {
+  form {
+    margin-bottom: auto;
+  }
+  .text__signin {
+    margin-left: auto;
+    margin-bottom: auto;
+  }
+}
+legend {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+legend h2 {
+  font-size: var(--fs-4xl);
+}
+legend p {
+  color: var(--gray-500);
+}
+fieldset {
+  display: grid;
+  gap: 2rem;
+  border: none;
+}
+
+.form__field {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 0.875rem;
+}
+
+@media (min-width: 1024px) {
+  fieldset {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .form__field--span {
+    grid-column: 1/-1;
+  }
+}
+
+label,
+input,
+select {
+  font-size: var(--fs-sm);
+}
+
+input,
+select {
+  width: 100%;
+  padding: 0.625rem 1rem;
+  font-weight: 500;
+  border-radius: var(--radii-md);
+  border: none;
+  outline: 1px solid var(--border);
+  outline-offset: 2px;
+  transition: all 200ms;
+}
+input:focus,
+select:focus {
+  outline: 2px solid var(--primary-500);
+}
+input::placeholder,
+select:invalid {
+  color: var(--gray-500);
+}
+
+select {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+option {
+  color: var(--foreground);
+}
+
+.text__headline {
+  line-height: 1.2;
+  text-align: center;
+  font-size: clamp(2.5rem, 3vw, 3rem);
+}
+
+.text__signin,
+.text__copyright {
+  font-weight: 600;
+}
+
+.text__conditions {
+  font-size: var(--fs-sm);
+  color: var(--gray-500);
+}
+
+.text__conditions span {
+  color: var(--primary-500);
+}
+
+.text__copyright__2 {
+  color: var(--gray-500);
+}
+
+.aside__display,
+.aside__section {
+  max-width: 36rem;
+}
+.aside__display {
+  margin-bottom: 4rem;
+}
+.aside__section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+.aside__section div ul {
+  display: flex;
+  gap: 1rem;
+  width: fit-content;
+  margin-inline: auto;
+  margin-bottom: 1rem;
+}
+.aside__section ul li i {
+  font-size: 1.5rem;
+}
+
+.icon__button {
+  position: absolute;
+  cursor: pointer;
+  height: 1rem;
+  right: 0.5rem;
+  bottom: 0.325rem;
+}
+.icon__button--inert {
+  pointer-events: none;
+}
+.icon__button--password {
+  bottom: 0.625rem;
+}
+
+footer {
+  flex-direction: row;
+  gap: 1rem;
+}

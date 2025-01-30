@@ -1,0 +1,56 @@
+@import "./index.css";
+
+table {
+  border-collapse: collapse;
+}
+
+th,
+td {
+  text-align: left;
+  padding: 1rem;
+}
+
+th {
+  font-weight: 500;
+  font-size: 1.1rem;
+}
+
+td {
+  vertical-align: top;
+}
+
+td,
+thead tr th,
+tbody tr th {
+  border-bottom: 1px solid var(--accent-fade);
+}
+
+/* th[id="data"],
+tr:last-child td[headers="data"] {
+  border-bottom: none;
+} */
+
+thead tr th {
+  font-size: 1.5rem;
+}
+tbody tr td {
+  font-size: 1.125rem;
+}
+
+thead tr th:last-child,
+tbody tr td:last-child {
+  border-left: 1px solid var(--accent-fade);
+}
+
+caption {
+  text-align: left;
+  margin-bottom: 2.5rem;
+}
+
+ul {
+  padding-left: 1rem;
+}
+
+li {
+  padding-block: 0.5rem;
+}

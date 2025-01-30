@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About Me</title>
+    <link rel="stylesheet" href="./css/media.css" />
+  </head>
+  <body class="content-grid">
+    <header>
+      <h1>About Me</h1>
+    </header>
+    <main>
+      <section class="message__section">
+        <h2>A Powerful Message</h2>
+        <p>
+          I am a passionate learner and aspiring professional, dedicated to
+          mastering the skills of the digital world - Sotfware Engineering,
+          having a passion for building pixel-perfect web applications from
+          design and solving problems with my gift.
+
+          <br />
+          <br />
+          My journey at AltSchool Africa has been transformative as I pursue a
+          career in technology, building meaningful solutions and creating
+          impactful innovations.
+        </p>
+      </section>
+
+      <hr />
+
+      <section class="picture__section">
+        <header>
+          <h2>Picture Element</h2>
+        </header>
+
+        <div>
+          <div class="picture__container">
+            <picture>
+              <source
+                srcset="./assets/imgs/image-1.jpg"
+                media="(max-width: 600px)"
+              />
+              <source
+                srcset="./assets/imgs/image-2.jpg"
+                media="(max-width: 1024px)"
+              />
+              <source
+                srcset="./assets/imgs/image-3.jpg"
+                media="(min-width: 1025px)"
+              />
+              <img
+                src="./assets/imgs/default.jpg"
+                alt="A picture of me"
+                width="360"
+              />
+            </picture>
+          </div>
+
+          <p class="caption">
+            Above is an image of me that adapts to different screen sizes
+          </p>
+        </div>
+      </section>
+
+      <br />
+      <hr />
+
+      <section class="video__audio__section">
+        <header>
+          <h2>Video and Audio Media Elements</h2>
+        </header>
+
+        <div class="video__section">
+          <div class="video__container">
+            <video controls width="360">
+              <source
+                src="./assets/video/video-photography.mp4"
+                type="video/mp4"
+              />
+              Your browser does not support the video tag.
+            </video>
+          </div>
+
+          <p class="caption">Here's a short video about my new camera</p>
+        </div>
+
+        <div class="audio__section">
+          <div class="audio__container">
+            <audio controls>
+              <source
+                src="./assets/audio/chroma-dusk-audio.mp3"
+                type="audio/mpeg"
+              />
+              Your browser does not support the audio tag.
+            </audio>
+          </div>
+
+          <p class="caption">Listen to some cool music while you are here 😊</p>
+        </div>
+      </section>
+    </main>
+    <br />
+    <br />
+    <footer><a href="table.html">Go to Table Display Page</a></footer>
+  </body>
+</html>
